@@ -4,329 +4,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | SkyPath Technology</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-rocket me-2"></i>SkyPath Technology
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="contact.html">Get Quote</a>
-                    </li>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fas fa-rocket me-2 text-primary"></i>SkyPath Technology
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary px-4" href="contact.html">Get Quote</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header text-white">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold mb-3">Our Services</h1>
+        <p class="lead mb-0">
+            End-to-end digital solutions built to scale your business.
+        </p>
+    </div>
+</section>
+
+<!-- Core Services -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title center-title">Core Services</h2>
+            <p class="lead">What we do best</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-laptop-code fs-2 text-primary mb-3"></i>
+                        <h5 class="fw-semibold">Web Design & Development</h5>
+                        <p class="text-muted small">
+                            High-performance websites that are fast, responsive, and SEO-ready.
+                        </p>
+                        <ul class="list-unstyled small">
+                            <li>✔ Responsive UI</li>
+                            <li>✔ SEO Optimized</li>
+                            <li>✔ Fast Load Time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-mobile-alt fs-2 text-primary mb-3"></i>
+                        <h5 class="fw-semibold">Mobile App Development</h5>
+                        <p class="text-muted small">
+                            Native and cross-platform apps for Android and iOS.
+                        </p>
+                        <ul class="list-unstyled small">
+                            <li>✔ Android & iOS</li>
+                            <li>✔ Scalable Architecture</li>
+                            <li>✔ App Store Ready</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-search fs-2 text-primary mb-3"></i>
+                        <h5 class="fw-semibold">SEO Services</h5>
+                        <p class="text-muted small">
+                            Rank higher, get traffic, and convert visitors into customers.
+                        </p>
+                        <ul class="list-unstyled small">
+                            <li>✔ On-Page SEO</li>
+                            <li>✔ Technical SEO</li>
+                            <li>✔ Local SEO</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Services -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title center-title">Additional Services</h2>
+            <p class="lead">More ways we help you grow</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-shopping-cart fs-2 text-primary mb-3"></i>
+                        <h6 class="fw-semibold">E-commerce Solutions</h6>
+                        <p class="small text-muted">
+                            Online stores with payment and inventory integration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-bullhorn fs-2 text-primary mb-3"></i>
+                        <h6 class="fw-semibold">Digital Marketing</h6>
+                        <p class="small text-muted">
+                            Data-driven marketing campaigns that convert.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 text-center border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-cogs fs-2 text-primary mb-3"></i>
+                        <h6 class="fw-semibold">Custom Software</h6>
+                        <p class="small text-muted">
+                            Software built specifically for your business needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Advanced Services -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title center-title">Advanced Solutions</h2>
+            <p class="lead">Built for modern businesses</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-brain fs-2 text-primary mb-3"></i>
+                        <h5 class="fw-semibold">AI & Automation</h5>
+                        <p class="small text-muted">
+                            Smart solutions using AI, chatbots, and automation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <i class="fas fa-chart-line fs-2 text-primary mb-3"></i>
+                        <h5 class="fw-semibold">Performance Marketing</h5>
+                        <p class="small text-muted">
+                            ROI-focused campaigns with measurable results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section text-white">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-8">
+                <h2 class="fw-bold">Have a project in mind?</h2>
+                <p class="mb-0">Let’s build something impactful together.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="contact.html" class="btn btn-light btn-lg px-5">
+                    Get Started <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold">SkyPath Technology</h5>
+                <p class="small text-muted">
+                    Building digital products that scale.
+                </p>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="fw-semibold">Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a class="text-muted text-decoration-none" href="index.html">Home</a></li>
+                    <li><a class="text-muted text-decoration-none" href="services.html">Services</a></li>
+                    <li><a class="text-muted text-decoration-none" href="contact.html">Contact</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Our Services</h1>
-            <p class="lead">Comprehensive digital solutions to transform your business</p>
-        </div>
-    </section>
-
-    <!-- Services Overview -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="section-title center-title">Comprehensive Digital Services</h2>
-                    <p class="lead">From website design to advanced digital solutions, we offer 25+ services to transform your business digitally.</p>
-                </div>
-            </div>
-            
-            <!-- Main Services -->
-            <div class="row g-4 mb-5">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-detail-card animate-on-scroll">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3>Web Design & Development</h3>
-                        <p>Custom websites that are responsive, fast, and SEO-optimized for your business success.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i> Responsive Design</li>
-                            <li><i class="fas fa-check text-success me-2"></i> SEO Optimization</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Fast Loading</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Modern UI/UX</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-detail-card animate-on-scroll" style="animation-delay: 0.1s;">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Mobile App Development</h3>
-                        <p>Native and cross-platform mobile applications for iOS and Android platforms.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i> iOS Development</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Android Development</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Cross-Platform</li>
-                            <li><i class="fas fa-check text-success me-2"></i> App Store Optimization</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-detail-card animate-on-scroll" style="animation-delay: 0.2s;">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3>SEO Services</h3>
-                        <p>Improve your search rankings and drive organic traffic to your website.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i> On-Page SEO</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Off-Page SEO</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Technical SEO</li>
-                            <li><i class="fas fa-check text-success me-2"></i> Local SEO</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Services -->
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h3 class="section-title center-title">Additional Services</h3>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card p-4 animate-on-scroll" style="animation-delay: 0.3s;">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h4 class="text-center mb-3">E-commerce Solutions</h4>
-                        <p class="text-center text-muted">Complete online store development with payment integration and inventory management.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card p-4 animate-on-scroll" style="animation-delay: 0.4s;">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-file-invoice"></i>
-                        </div>
-                        <h4 class="text-center mb-3">Billing Software</h4>
-                        <p class="text-center text-muted">Custom billing and invoicing software solutions for businesses of all sizes.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-card p-4 animate-on-scroll" style="animation-delay: 0.5s;">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-bullhorn"></i>
-                        </div>
-                        <h4 class="text-center mb-3">Digital Marketing</h4>
-                        <p class="text-center text-muted">SEO, social media, and online advertising campaigns to grow your business.</p>
-                    </div>
-                </div>
+            <div class="col-lg-3">
+                <h6 class="fw-semibold">Contact</h6>
+                <p class="small text-muted mb-1">sales@skypathtech.com</p>
+                <p class="small text-muted">+91 86888 62386</p>
             </div>
         </div>
-    </section>
 
-    <!-- Advanced Services -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="section-title center-title">Advanced Digital Solutions</h2>
-                    <p class="lead">Specialized services for modern business needs</p>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="service-detail-card animate-on-scroll" style="animation-delay: 0.6s;">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>AI & Machine Learning</h3>
-                        <p>Cutting-edge AI and ML solutions for modern businesses.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Predictive Analytics</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Natural Language Processing</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Computer Vision</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Chatbots</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-detail-card animate-on-scroll" style="animation-delay: 0.7s;">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Performance Marketing</h3>
-                        <p>Data-driven marketing campaigns focused on measurable results.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> PPC Management</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Campaign Optimization</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> ROI Tracking</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> A/B Testing</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row g-4 mt-4">
-                <div class="col-md-6">
-                    <div class="service-detail-card animate-on-scroll" style="animation-delay: 0.8s;">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <h3>Quality Assurance</h3>
-                        <p>Comprehensive testing and quality assurance for all projects.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Manual Testing</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Automated Testing</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Performance Testing</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Security Testing</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-detail-card animate-on-scroll" style="animation-delay: 0.9s;">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <h3>API Integration</h3>
-                        <p>Seamless integration with third-party services and APIs.</p>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> REST API</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> GraphQL</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Webhook Integration</li>
-                                    <li><i class="fas fa-check-circle text-primary me-2"></i> Custom Integrations</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center small text-muted mt-4">
+            © 2014 – Present SkyPath Technology Pvt Ltd
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Call to Action -->
-    <section class="py-5 cta-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="mb-3">Ready to Transform Your Business?</h2>
-                    <p class="mb-0">Let's discuss your project and create something amazing together</p>
-                </div>
-                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                    <a href="contact.html" class="btn btn-light btn-lg px-5">Start Your Project <i class="fas fa-arrow-right ms-2"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <h3 class="footer-heading">SkyPath Technology</h3>
-                    <p class="mt-3">A leading digital solutions provider helping businesses transform their online presence with cutting-edge technology and creative solutions.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Services</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="#">Portfolio</a>
-                        <a href="#">Technologies</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="footer-heading">Services</h4>
-                    <div class="footer-links">
-                        <a href="services.html">Web Design & Development</a>
-                        <a href="services.html">Mobile App Development</a>
-                        <a href="services.html">Digital Marketing</a>
-                        <a href="services.html">SEO Services</a>
-                        <a href="services.html">Custom Software</a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4 class="footer-heading">Contact Info</h4>
-                    <ul class="list-unstyled contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Pabbas IT Park, Main Road, Madikonda, Warangal, Telangana - 506142</li>
-                        <li><i class="fas fa-envelope"></i> sales@skypathtech.com</li>
-                        <li><i class="fas fa-phone"></i> +91 86888 62386</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center copyright">
-                    <p>&copy; 2014 - Present, SkyPath Technology Private Limited. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4,374 +4,246 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | SkyPath Technology</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="fas fa-rocket me-2"></i>SkyPath Technology
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary" href="contact.html">Get Quote</a>
-                    </li>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="fas fa-rocket me-2 text-primary"></i>SkyPath Technology
+        </a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                <li class="nav-item ms-lg-3">
+                    <a class="btn btn-primary px-4" href="contact.html">Get Quote</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header text-white">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold mb-3">Contact Us</h1>
+        <p class="lead mb-0">
+            Let’s talk about your project and make it happen.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- Form -->
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4 p-lg-5">
+                        <h4 class="fw-semibold mb-4">Send us a message</h4>
+
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name *</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number *</label>
+                                    <input type="tel" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-control" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Company</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Service Interested In</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select a service</option>
+                                        <option>Web Development</option>
+                                        <option>Mobile App Development</option>
+                                        <option>SEO</option>
+                                        <option>Digital Marketing</option>
+                                        <option>Custom Software</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Message *</label>
+                                    <textarea class="form-control" rows="5" required></textarea>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn-primary btn-lg w-100">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+                <div class="mb-4">
+                    <h4 class="fw-semibold mb-3">Contact Information</h4>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-phone fs-4 text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold">Phone</div>
+                                <small class="text-muted">+91 86888 62386</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <i class="fas fa-envelope fs-4 text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold">Email</div>
+                                <small class="text-muted">sales@skypathtech.com</small>
+                            </div>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="fas fa-map-marker-alt fs-4 text-primary me-3"></i>
+                            <div>
+                                <div class="fw-semibold">Address</div>
+                                <small class="text-muted">
+                                    Pabbas IT Park, Madikonda,<br>
+                                    Warangal, Telangana – 506142
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Office Accordion -->
+                <div class="accordion shadow-sm" id="officeAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#office1">
+                                <i class="fas fa-building me-2 text-primary"></i> Warangal Office
+                            </button>
+                        </h2>
+                        <div id="office1" class="accordion-collapse collapse show">
+                            <div class="accordion-body small text-muted">
+                                Pabbas IT Park, Madikonda<br>
+                                +91 86888 62386
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#office2">
+                                <i class="fas fa-city me-2 text-primary"></i> Hyderabad Office
+                            </button>
+                        </h2>
+                        <div id="office2" class="accordion-collapse collapse">
+                            <div class="accordion-body small text-muted">
+                                Madhapur, Hyderabad<br>
+                                Telangana – 500081
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="card border-0 shadow-lg overflow-hidden">
+            <div class="ratio ratio-16x9">
+                <iframe
+                    src="https://www.google.com/maps?q=Warangal%20Telangana&output=embed"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold">SkyPath Technology</h5>
+                <p class="small text-muted">
+                    We build scalable digital products.
+                </p>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="fw-semibold">Links</h6>
+                <ul class="list-unstyled small">
+                    <li><a class="text-muted text-decoration-none" href="index.html">Home</a></li>
+                    <li><a class="text-muted text-decoration-none" href="services.html">Services</a></li>
+                    <li><a class="text-muted text-decoration-none" href="contact.html">Contact</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Contact Us</h1>
-            <p class="lead">Ready to transform your business with our website design services? Let's discuss your project.</p>
-        </div>
-    </section>
-
-    <!-- Contact Form & Info -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-7">
-                    <div class="contact-form animate-on-scroll">
-                        <h3 class="mb-4">Send us a Message</h3>
-                        <form id="contactForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="fullName" class="form-label">Full Name *</label>
-                                        <input type="text" class="form-control" id="fullName" placeholder="Your full name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="phoneNumber" class="form-label">Phone Number *</label>
-                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="+91 98765 43210" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="emailAddress" class="form-label">Email Address *</label>
-                                        <input type="email" class="form-control" id="emailAddress" placeholder="your@email.com" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="mb-3">
-                                        <label for="companyName" class="form-label">Company Name</label>
-                                        <input type="text" class="form-control" id="companyName" placeholder="Your company name">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="serviceInterest" class="form-label">Service Interest</label>
-                                <select class="form-select" id="serviceInterest">
-                                    <option selected>Select a service</option>
-                                    <option value="web">Web Design & Development</option>
-                                    <option value="app">Mobile App Development</option>
-                                    <option value="seo">SEO Services</option>
-                                    <option value="marketing">Digital Marketing</option>
-                                    <option value="software">Custom Software</option>
-                                    <option value="consulting">Business Consulting</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message *</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project requirements..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="animate-on-scroll" style="animation-delay: 0.2s;">
-                        <h3 class="mb-4">Contact Information</h3>
-                        <div class="contact-info-details mb-5">
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon me-3">
-                                    <i class="fas fa-phone-alt text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Phone</h5>
-                                    <p class="mb-1">Sales: +91 86888 62386</p>
-                                    <p>Technical: +91 81063 16251</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon me-3">
-                                    <i class="fas fa-envelope text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Email</h5>
-                                    <p>sales@skypathtech.com</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon me-3">
-                                    <i class="fas fa-map-marker-alt text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Address</h5>
-                                    <p>Pabbas IT Park, Main Road<br>Madikonda, Warangal, Telangana - 506142</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start">
-                                <div class="contact-icon me-3">
-                                    <i class="fas fa-clock text-primary"></i>
-                                </div>
-                                <div>
-                                    <h5>Business Hours</h5>
-                                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3 class="mb-4">Our Office Locations</h3>
-                        <div class="accordion" id="locationsAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#location1">
-                                        <i class="fas fa-map-marker-alt text-primary me-2"></i> Registered Office (Warangal)
-                                    </button>
-                                </h2>
-                                <div id="location1" class="accordion-collapse collapse show" data-bs-parent="#locationsAccordion">
-                                    <div class="accordion-body">
-                                        <p class="mb-1">Pabbas IT Park, Main Road, Madikonda</p>
-                                        <p class="mb-1">Warangal, Telangana, India - 506142</p>
-                                        <p class="mb-1">+91 98765 43210</p>
-                                        <p class="mb-0">info@skypathtech.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#location2">
-                                        <i class="fas fa-building text-primary me-2"></i> Corporate Office (Hyderabad)
-                                    </button>
-                                </h2>
-                                <div id="location2" class="accordion-collapse collapse" data-bs-parent="#locationsAccordion">
-                                    <div class="accordion-body">
-                                        <p class="mb-1">Plot #4/2, Sector 1, RAM SVR</p>
-                                        <p class="mb-1">Huda Techno Enclave, Madhapur, Hyderabad - 500081</p>
-                                        <p class="mb-1">+91 98765 43211</p>
-                                        <p class="mb-0">corporate@skypathtech.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#location3">
-                                        <i class="fas fa-globe text-primary me-2"></i> International Office (Singapore)
-                                    </button>
-                                </h2>
-                                <div id="location3" class="accordion-collapse collapse" data-bs-parent="#locationsAccordion">
-                                    <div class="accordion-body">
-                                        <p class="mb-1">Level 42, Tower Three, 8 Temasek Blvd</p>
-                                        <p class="mb-1">Suntec, Singapore 038988</p>
-                                        <p class="mb-1">+65 1234 5678</p>
-                                        <p class="mb-0">international@skypathtech.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-3">
+                <h6 class="fw-semibold">Contact</h6>
+                <p class="small text-muted mb-1">sales@skypathtech.com</p>
+                <p class="small text-muted">+91 86888 62386</p>
             </div>
         </div>
-    </section>
 
-    <!-- Map Section -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="section-title center-title">Visit Our Main Office</h2>
-                    <p class="lead">Located in the heart of Warangal, Telangana</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="map-container animate-on-scroll">
-                        <div class="ratio ratio-16x9">
-                            <!-- Embedded Google Map -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3803.4545920862587!2d79.60936517491734!3d17.593045183291537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a334f0e6e6d5f2f%3A0x9a5b12e0c2d7f5b5!2sWarangal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1699572345678!5m2!1sen!2sin" 
-                                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="map-info p-4">
-                            <h5><i class="fas fa-map-pin text-danger me-2"></i> SkyPath Technology - Warangal Office</h5>
-                            <p class="mb-1">Pabbas IT Park, Main Road, Madikonda, Warangal, Telangana 506142</p>
-                            <div class="d-flex align-items-center mt-2">
-                                <span class="badge bg-success me-2">4.9 ★★★★★</span>
-                                <small class="text-muted">Based on 24 reviews</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="text-center small text-muted mt-4">
+            © 2014 – Present SkyPath Technology Pvt Ltd
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- Regional Offices -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="section-title center-title">Regional Offices</h2>
-                    <p class="lead">Multiple locations to serve you better across India</p>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card animate-on-scroll">
-                        <div class="location-icon">
-                            <i class="fas fa-city"></i>
-                        </div>
-                        <h4>Vizag</h4>
-                        <p class="text-muted">Dwaraka Nagar, Visakhapatnam</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card animate-on-scroll" style="animation-delay: 0.1s;">
-                        <div class="location-icon">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h4>Chennai</h4>
-                        <p class="text-muted">Tharamani, Opp: Indra Nagar Railway Station</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card animate-on-scroll" style="animation-delay: 0.2s;">
-                        <div class="location-icon">
-                            <i class="fas fa-landmark"></i>
-                        </div>
-                        <h4>Vijayawada</h4>
-                        <p class="text-muted">MG Road, Kala Nagar, Benz Circle</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card animate-on-scroll" style="animation-delay: 0.3s;">
-                        <div class="location-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <h4>Bengaluru</h4>
-                        <p class="text-muted">4, Union Street, Shivaji Nagar</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card animate-on-scroll" style="animation-delay: 0.4s;">
-                        <div class="location-icon">
-                            <i class="fas fa-home"></i>
-                        </div>
-                        <h4>Karimnagar</h4>
-                        <p class="text-muted">Chaitanyapuri, Jagithyala Road</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="location-card animate-on-scroll" style="animation-delay: 0.5s;">
-                        <div class="location-icon">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <h4>Noida</h4>
-                        <p class="text-muted">The Corenthum, 7th Floor Tower B, Sector 62</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <h3 class="footer-heading">SkyPath Technology</h3>
-                    <p class="mt-3">A leading digital solutions provider helping businesses transform their online presence with cutting-edge technology and creative solutions.</p>
-                    <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <div class="footer-links">
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Services</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="#">Portfolio</a>
-                        <a href="#">Technologies</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="footer-heading">Services</h4>
-                    <div class="footer-links">
-                        <a href="services.html">Web Design & Development</a>
-                        <a href="services.html">Mobile App Development</a>
-                        <a href="services.html">Digital Marketing</a>
-                        <a href="services.html">SEO Services</a>
-                        <a href="services.html">Custom Software</a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4 class="footer-heading">Contact Info</h4>
-                    <ul class="list-unstyled contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Pabbas IT Park, Main Road, Madikonda, Warangal, Telangana - 506142</li>
-                        <li><i class="fas fa-envelope"></i> sales@skypathtech.com</li>
-                        <li><i class="fas fa-phone"></i> +91 86888 62386</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center copyright">
-                    <p>&copy; 2014 - Present, SkyPath Technology Private Limited. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!-- Basic form handler -->
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thanks! We will contact you shortly.');
+    this.reset();
+});
+</script>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
-    <script>
-        // Contact form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('fullName').value;
-            const service = document.getElementById('serviceInterest').value;
-            
-            // Show success message
-            alert(`Thank you ${name}! Your inquiry for ${service} has been received. We'll contact you shortly.`);
-            
-            // Reset form
-            this.reset();
-        });
-    </script>
 </body>
 </html>
