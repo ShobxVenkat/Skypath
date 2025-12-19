@@ -61,22 +61,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+
+
+
 /* =========================
-   Contact Form UX (Safe)
+   Services Cards Animation
 ========================= */
-const form = document.getElementById('contactForm');
+const serviceCards = document.querySelectorAll('.service-card');
 
-if (form) {
-  form.addEventListener('submit', () => {
-    const btn = form.querySelector('button');
-    if (!btn) return;
+if (serviceCards.length) {
+  const serviceObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-show');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-    btn.innerText = 'Sending...';
-    btn.disabled = true;
-
-    setTimeout(() => {
-      btn.innerText = 'Send Message';
-      btn.disabled = false;
-    }, 1200);
+  serviceCards.forEach(card => {
+    card.classList.add('animate-hidden');
+    serviceObserver.observe(card);
   });
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.contact-animate');
+
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          entry.target.style.transitionDelay = `${index * 0.15}s`;
+          entry.target.classList.add('animate-show');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  items.forEach(el => {
+    el.classList.add('animate-hidden');
+    observer.observe(el);
+  });
+});
