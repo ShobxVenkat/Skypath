@@ -107,11 +107,12 @@ $isLoggedIn = false; // later session se aayega
 </a>
 
       <!-- PANEL BUTTON -->
-      <div class="nav-item <?= $currentPage=='panel'?'active':'' ?>"
-           onclick="togglePanelMenu(event)">
-        <i class="bi bi-grid-fill"></i>
-        My Panel
-      </div>
+     <!-- PANEL BUTTON -->
+<a href="panel.php" class="nav-item <?= $currentPage=='panel'?'active':'' ?>">
+  <i class="bi bi-grid-fill"></i>
+  My Panel
+</a>
+
 
       <a href="profile.php" class="nav-item <?= $currentPage=='profile'?'active':'' ?>">
         <i class="bi bi-person-fill"></i>

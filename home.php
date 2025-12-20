@@ -55,9 +55,7 @@ require "partials/header.php";
 
   <!-- 🔍 Search Section -->
   <section class="mb-4">
-    <div class="search-label mb-2">
-      <i class="bi bi-geo-alt"></i> Select Location
-    </div>
+    
 
     <div class="input-group shadow rounded-pill overflow-hidden">
       <input

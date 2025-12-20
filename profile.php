@@ -8,7 +8,7 @@ require "partials/header.php";
 
   <!-- PROFILE HEADER -->
   <div class="text-center mb-4">
-    <img src="https://via.placeholder.com/120"
+    <img src="images/user.jpg"
          class="rounded-circle mb-2"
          alt="Profile Picture">
 

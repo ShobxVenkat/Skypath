@@ -13,13 +13,13 @@ require "partials/header.php";
 <script src="data/servicesData.js"></script>
 
 <script>
-const type = new URLSearchParams(window.location.search).get('type');
+const type = new URLSearchParams(window.location.search).get('type') || '';
 const rawType = type.toLowerCase().replace(/\s+/g, '');
 let filtered = [];
 
-/* FILTER LOGIC */
-if (rawType.includes('bhk') || rawType.includes('apartment')) {
+/* ================= FILTER LOGIC ================= */
 
+if (rawType.includes('bhk') || rawType.includes('apartment')) {
   filtered = realEstateData.filter(item => {
     const bhk = item.bhk.replace(/\s+/g, '').toLowerCase();
     if (rawType.includes('1bhk')) return bhk === '1bhk';
@@ -28,43 +28,36 @@ if (rawType.includes('bhk') || rawType.includes('apartment')) {
     if (rawType.includes('apartment')) return item.type === 'Apartment';
     return false;
   });
-
 } else if (rawType.includes('co-living')) {
-
   filtered = hostelData.filter(item =>
     item.type.toLowerCase().includes('co-living')
   );
-
 } else if (rawType.includes('boys')) {
-
   filtered = hostelData.filter(item =>
     item.type.toLowerCase().includes('boys') &&
     !item.type.toLowerCase().includes('co-living')
   );
-
 } else if (rawType.includes('girls')) {
-
   filtered = hostelData.filter(item =>
     item.type.toLowerCase().includes('girls') &&
     !item.type.toLowerCase().includes('co-living')
   );
-
 } else {
-
   filtered = servicesData.filter(item =>
     item.name.toLowerCase().includes(type.toLowerCase())
   );
-
 }
 
-/* IMAGE HELPER */
+/* ================= IMAGE HELPER ================= */
+
 function getImage(item) {
   if (Array.isArray(item.images) && item.images.length) return item.images[0];
   if (item.image) return item.image;
-  return '/images/placeholder.jpg';
+  return 'images/placeholder.jpg';
 }
 
-/* RENDER */
+/* ================= RENDER LIST ================= */
+
 const container = document.getElementById('listingContainer');
 container.innerHTML = filtered.map(item => `
   <div class="card mb-3 shadow-sm position-relative">
@@ -78,7 +71,8 @@ container.innerHTML = filtered.map(item => `
 
     <a href="detail.php?id=${item.id}" class="text-decoration-none text-dark">
       <div class="card-body d-flex gap-3">
-        <img src="${getImage(item)}" width="80" class="rounded">
+        <img src="${getImage(item)}" width="80" height="80"
+             class="rounded object-fit-cover">
         <div class="flex-grow-1">
           <h5 class="fw-bold mb-1">${item.price || item.rent}</h5>
           <h6 class="text-primary fw-semibold mb-1">
@@ -94,7 +88,7 @@ container.innerHTML = filtered.map(item => `
     <div class="px-3 pb-3">
       <button
         class="btn btn-primary btn-sm w-100"
-        onclick="openInterestPopup('${item.id}')">
+        onclick="openConfirmPopup('${item.id}')">
         I'm Interested
       </button>
     </div>
@@ -103,7 +97,28 @@ container.innerHTML = filtered.map(item => `
 `).join('');
 </script>
 
-<!-- INTEREST POPUP -->
+<!-- ================= CONFIRM POPUP (NO GRADIENT) ================= -->
+
+<div id="confirmPopup" class="confirm-overlay d-none">
+  <div class="confirm-card text-center">
+    <h5 class="fw-bold">Are you sure?</h5>
+    <p class="text-muted mb-4">
+      Do you want to show interest in this listing?
+    </p>
+
+    <div class="d-flex gap-3">
+      <button class="btn btn-outline-secondary w-50" onclick="closeConfirmPopup()">
+        No
+      </button>
+      <button class="btn btn-primary w-50" onclick="confirmInterest()">
+        Yes
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SUCCESS POPUP (GRADIENT) ================= -->
+
 <div id="interestPopup" class="interest-overlay d-none">
   <div class="interest-card text-center">
     <div class="check-icon">✓</div>
@@ -119,6 +134,25 @@ container.innerHTML = filtered.map(item => `
 </div>
 
 <style>
+/* ---------- CONFIRM (NO GRADIENT) ---------- */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.15);
+  z-index: 9998;
+}
+.confirm-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 22px;
+  width: 90%;
+  max-width: 340px;
+}
+
+/* ---------- SUCCESS (GRADIENT) ---------- */
 .interest-overlay {
   position: fixed;
   inset: 0;
@@ -150,8 +184,23 @@ container.innerHTML = filtered.map(item => `
 </style>
 
 <script>
-function openInterestPopup(id) {
-  console.log('Interested ID:', id);
+/* ================= INTEREST FLOW ================= */
+
+let selectedInterestId = null;
+
+function openConfirmPopup(id) {
+  selectedInterestId = id;
+  document.getElementById('confirmPopup').classList.remove('d-none');
+}
+
+function closeConfirmPopup() {
+  selectedInterestId = null;
+  document.getElementById('confirmPopup').classList.add('d-none');
+}
+
+function confirmInterest() {
+  console.log('Interest confirmed:', selectedInterestId);
+  closeConfirmPopup();
   document.getElementById('interestPopup').classList.remove('d-none');
 }
 
@@ -160,8 +209,8 @@ function closeInterestPopup() {
   window.location.href = '/project/home.php';
 }
 
+/* ================= FAVOURITES ================= */
 
-/* FAV LOGIC */
 function getFavs() {
   return JSON.parse(localStorage.getItem('favourites')) || [];
 }
@@ -170,7 +219,9 @@ function setFavs(favs) {
 }
 function toggleFav(id) {
   let favs = getFavs();
-  favs = favs.includes(id) ? favs.filter(f => f !== id) : [...favs, id];
+  favs = favs.includes(id)
+    ? favs.filter(f => f !== id)
+    : [...favs, id];
   setFavs(favs);
   updateFavIcons();
 }

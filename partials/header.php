@@ -1,6 +1,6 @@
 <?php
 $pageTitle = $pageTitle ?? "RHS Connects";
-$location  = $location  ?? "Andhra Pradesh, Krishna District...";
+$location  = $location  ?? "Location not set";
 ?>
 
 <!DOCTYPE html>
@@ -19,15 +19,9 @@ $location  = $location  ?? "Andhra Pradesh, Krishna District...";
     .bg-app {
       background-color: #2f66f3;
     }
-
-    .location-pill {
-      background-color: rgba(255,255,255,0.18);
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 300px;
-      font-size: 14px;
-    }
+.set-pointer {
+  cursor: pointer;
+}
 
     .header-icon {
       width: 50px;
@@ -38,6 +32,41 @@ $location  = $location  ?? "Andhra Pradesh, Krishna District...";
       height: 42px;
       width: auto;
     }
+
+    /* ONE LINE LOCATION BAR */
+    .location-bar {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-start;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      font-size: 14px;
+      gap:4px;
+    }
+
+    .location-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow: hidden;
+    }
+
+    .location-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 230px;
+      font-weight: 500;
+    }
+
+    .set-location {
+      color: #2f66f3;
+      font-weight: 600;
+      white-space: nowrap;
+    }
   </style>
 </head>
 
@@ -47,23 +76,20 @@ $location  = $location  ?? "Andhra Pradesh, Krishna District...";
 
   <!-- TOP ROW -->
   <div class="d-flex justify-content-between align-items-center">
-
-    <!-- LOGO IMAGE ONLY -->
-    <div class="d-flex align-items-center">
-      <img src="images/logo.png" alt="RHS Logo" class="logo-img">
-    </div>
-
-    <!-- NOTIFICATION ICON (PNG) -->
-    <img src="images/bell.png"
-         alt="Notifications"
-         class="header-icon">
+    <a href="home.php">
+    <img src="images/logo.png" alt="RHS Logo" class="logo-img set-pointer"></a>
+    <img src="images/bell.png" alt="Notifications" class="header-icon set-pointer">
   </div>
 
-  <!-- LOCATION -->
-  <div class="mt-2">
-    <div class="location-pill rounded-pill px-3 py-1 d-inline-flex align-items-center gap-1">
-      <i class="bi bi-geo-alt"></i>
-      <span><?= $location ?></span>
+  <!-- LOCATION (ONE LINE) -->
+  <div class="mt-3">
+    <div class="location-bar">
+      <div class="location-left">
+        <i class="bi bi-geo-alt"></i>
+        <span class="location-text"><?= $location ?></span>
+      </div>
+
+      <span class="set-pointer">Set location</span>
     </div>
   </div>
 
