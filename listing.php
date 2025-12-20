@@ -5,47 +5,27 @@ require "partials/header.php";
 
 <div class="container py-4 pb-5">
   <h4 class="fw-bold mb-3"><?= htmlspecialchars($type) ?> Lists</h4>
-
   <div id="listingContainer"></div>
 </div>
+
 <script src="data/realEstateData.js"></script>
 <script src="data/hostelData.js"></script>
 <script src="data/servicesData.js"></script>
 
 <script>
-  console.log(realEstateData); // test
-</script>
-
-
-<script>
 const type = new URLSearchParams(window.location.search).get('type');
-let data = [];
-
-/* Decide dataset */
-if (type.includes('BHK') || type.includes('Apartment')) {
-  data = realEstateData;
-} else if (type.includes('Hostel') || type.includes('PG')) {
-  data = hostelData;
-} else {
-  data = servicesData;
-}
-
-/* Filter */
 const rawType = type.toLowerCase().replace(/\s+/g, '');
-
 let filtered = [];
 
+/* FILTER LOGIC */
 if (rawType.includes('bhk') || rawType.includes('apartment')) {
 
   filtered = realEstateData.filter(item => {
     const bhk = item.bhk.replace(/\s+/g, '').toLowerCase();
-
     if (rawType.includes('1bhk')) return bhk === '1bhk';
     if (rawType.includes('2bhk')) return bhk === '2bhk';
     if (rawType.includes('3bhk')) return bhk === '3bhk';
-
     if (rawType.includes('apartment')) return item.type === 'Apartment';
-
     return false;
   });
 
@@ -69,96 +49,142 @@ if (rawType.includes('bhk') || rawType.includes('apartment')) {
     !item.type.toLowerCase().includes('co-living')
   );
 
-}
-
- else {
+} else {
 
   filtered = servicesData.filter(item =>
     item.name.toLowerCase().includes(type.toLowerCase())
   );
+
 }
 
+/* IMAGE HELPER */
+function getImage(item) {
+  if (Array.isArray(item.images) && item.images.length) return item.images[0];
+  if (item.image) return item.image;
+  return '/images/placeholder.jpg';
+}
 
+/* RENDER */
 const container = document.getElementById('listingContainer');
-
 container.innerHTML = filtered.map(item => `
-  <a href="detail.php?id=${item.id}"
-     class="text-decoration-none text-dark">
+  <div class="card mb-3 shadow-sm position-relative">
 
-    <div class="card mb-3 shadow-sm position-relative">
+    <button
+      class="btn position-absolute top-0 end-0 m-2 fav-btn"
+      data-id="${item.id}"
+      onclick="event.preventDefault(); toggleFav('${item.id}')">
+      <i class="bi bi-heart"></i>
+    </button>
 
-      <!-- ❤️ Heart icon -->
-      <button
-        class="btn position-absolute top-0 end-0 m-2 fav-btn"
-        data-id="${item.id}"
-        onclick="event.preventDefault(); toggleFav('${item.id}')">
-        <i class="bi bi-heart"></i>
-      </button>
-
+    <a href="detail.php?id=${item.id}" class="text-decoration-none text-dark">
       <div class="card-body d-flex gap-3">
-        <img src="${item.images?.[0] || item.image}"
-             width="80" class="rounded">
-
+        <img src="${getImage(item)}" width="80" class="rounded">
         <div class="flex-grow-1">
           <h5 class="fw-bold mb-1">${item.price || item.rent}</h5>
-
           <h6 class="text-primary fw-semibold mb-1">
             ${item.title || item.name}
           </h6>
-
           <p class="text-muted small mb-0">
             ${item.bhk || item.type || ''}
           </p>
         </div>
       </div>
+    </a>
 
+    <div class="px-3 pb-3">
+      <button
+        class="btn btn-primary btn-sm w-100"
+        onclick="openInterestPopup('${item.id}')">
+        I'm Interested
+      </button>
     </div>
-  </a>
-`).join('');
 
+  </div>
+`).join('');
 </script>
 
+<!-- INTEREST POPUP -->
+<div id="interestPopup" class="interest-overlay d-none">
+  <div class="interest-card text-center">
+    <div class="check-icon">✓</div>
+    <h3 class="fw-bold mt-3">Thank You!</h3>
+    <p class="text-muted">
+      Your interest has been successfully received.
+      We will get back to you soon.
+    </p>
+    <button class="btn btn-primary mt-3" onclick="closeInterestPopup()">
+      Go to Home
+    </button>
+  </div>
+</div>
 
- <Script>
-    function getFavs() {
-  return JSON.parse(localStorage.getItem('favourites')) || [];
+<style>
+.interest-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.interest-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 24px;
+  width: 90%;
+  max-width: 380px;
+}
+.check-icon {
+  width: 80px;
+  height: 80px;
+  background: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+</style>
+
+<script>
+function openInterestPopup(id) {
+  console.log('Interested ID:', id);
+  document.getElementById('interestPopup').classList.remove('d-none');
 }
 
+function closeInterestPopup() {
+  document.getElementById('interestPopup').classList.add('d-none');
+  window.location.href = '/project/home.php';
+}
+
+
+/* FAV LOGIC */
+function getFavs() {
+  return JSON.parse(localStorage.getItem('favourites')) || [];
+}
 function setFavs(favs) {
   localStorage.setItem('favourites', JSON.stringify(favs));
 }
-
 function toggleFav(id) {
   let favs = getFavs();
-
-  if (favs.includes(id)) {
-    favs = favs.filter(f => f !== id);
-  } else {
-    favs.push(id);
-  }
-
+  favs = favs.includes(id) ? favs.filter(f => f !== id) : [...favs, id];
   setFavs(favs);
   updateFavIcons();
 }
-
 function updateFavIcons() {
   const favs = getFavs();
   document.querySelectorAll('.fav-btn').forEach(btn => {
     const icon = btn.querySelector('i');
-    const id = btn.dataset.id;
-
-    if (favs.includes(id)) {
-      icon.classList.remove('bi-heart');
-      icon.classList.add('bi-heart-fill', 'text-danger');
-    } else {
-      icon.classList.remove('bi-heart-fill', 'text-danger');
-      icon.classList.add('bi-heart');
-    }
+    favs.includes(btn.dataset.id)
+      ? icon.classList.replace('bi-heart', 'bi-heart-fill')
+      : icon.classList.replace('bi-heart-fill', 'bi-heart');
   });
 }
-
 updateFavIcons();
+</script>
 
- </Script>
 <?php require "partials/bottom-nav.php"; ?>
 <?php require "partials/footer.php"; ?>
