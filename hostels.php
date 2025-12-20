@@ -11,7 +11,7 @@ require "partials/header.php";
     $items = [
       "Boys Hostel",
       "Girls Hostel",
-      "PG / Shared Rooms"
+      "Co-Living (Boys & Girls)"
     ];
 
     foreach ($items as $item) {

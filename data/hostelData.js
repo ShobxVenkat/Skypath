@@ -5,25 +5,12 @@ window.hostelData = [
     location: "Madhapur, Hyderabad",
     rent: "₹ 7,500 / month",
     type: "Boys Hostel",
-
     roomTypes: ["Single Sharing", "Double Sharing", "Triple Sharing"],
-
-    facilities: [
-      "WiFi",
-      "24x7 Water",
-      "Power Backup",
-      "Laundry",
-      "CCTV Security"
-    ],
-
-    food: {
-      available: true,
-      type: "Veg & Non-Veg"
-    },
-
+    facilities: ["WiFi", "24x7 Water", "Power Backup", "Laundry", "CCTV Security"],
+    food: { available: true, type: "Veg & Non-Veg" },
     images: [
-      "images/hostel/boys-1.jpg",
-      "images/hostel/boys-2.jpg"
+       "images/hostel/boys.jpg",
+       "images/hostel/boys.jpg",,
     ]
   },
 
@@ -33,24 +20,12 @@ window.hostelData = [
     location: "Gachibowli, Hyderabad",
     rent: "₹ 8,000 / month",
     type: "Girls Hostel",
-
     roomTypes: ["Double Sharing", "Triple Sharing"],
-
-    facilities: [
-      "Biometric Entry",
-      "CCTV",
-      "Housekeeping",
-      "WiFi"
-    ],
-
-    food: {
-      available: true,
-      type: "Veg Only"
-    },
-
-    images: [
-      "images/hostel/girls-1.jpg",
-      "images/hostel/girls-2.jpg"
+    facilities: ["Biometric Entry", "CCTV", "Housekeeping", "WiFi"],
+    food: { available: true, type: "Veg Only" },
+    images:[
+       "images/hostel/girls.jpg",
+       "images/hostel/girls.jpg",
     ]
   },
 
@@ -60,24 +35,12 @@ window.hostelData = [
     location: "Whitefield, Bangalore",
     rent: "₹ 6,500 / month",
     type: "Boys Hostel",
-
     roomTypes: ["Double Sharing", "Triple Sharing"],
-
-    facilities: [
-      "WiFi",
-      "Lift",
-      "Power Backup",
-      "Daily Cleaning"
-    ],
-
-    food: {
-      available: true,
-      type: "Veg & Non-Veg"
-    },
-
-    images: [
-      "images/hostel/boys-3.jpg",
-      "images/hostel/boys-4.jpg"
+    facilities: ["WiFi", "Lift", "Power Backup", "Daily Cleaning"],
+    food: { available: true, type: "Veg & Non-Veg" },
+    images:[
+       "images/hostel/boys.jpg",
+       "images/hostel/boys.jpg",,
     ]
   },
 
@@ -87,24 +50,12 @@ window.hostelData = [
     location: "Viman Nagar, Pune",
     rent: "₹ 7,800 / month",
     type: "Girls Hostel",
-
     roomTypes: ["Single Sharing", "Double Sharing"],
-
-    facilities: [
-      "WiFi",
-      "Laundry",
-      "CCTV",
-      "Power Backup"
-    ],
-
-    food: {
-      available: true,
-      type: "Veg Only"
-    },
-
-    images: [
-      "images/hostel/girls-3.jpg",
-      "images/hostel/girls-4.jpg"
+    facilities: ["WiFi", "Laundry", "CCTV", "Power Backup"],
+    food: { available: true, type: "Veg Only" },
+    images:[
+       "images/hostel/girls.jpg",
+       "images/hostel/girls.jpg",,
     ]
   },
 
@@ -114,25 +65,12 @@ window.hostelData = [
     location: "Sector 62, Noida",
     rent: "₹ 9,500 / month",
     type: "Co-Living (Boys & Girls)",
-
     roomTypes: ["Single Sharing", "Double Sharing"],
-
-    facilities: [
-      "High-speed WiFi",
-      "Housekeeping",
-      "Gym Access",
-      "Common Lounge",
-      "CCTV"
-    ],
-
-    food: {
-      available: false,
-      type: "Not Included"
-    },
-
+    facilities: ["High-speed WiFi", "Housekeeping", "Gym Access", "Common Lounge", "CCTV"],
+    food: { available: false, type: "Not Included" },
     images: [
-      "images/hostel/coliving-1.jpg",
-      "images/hostel/coliving-2.jpg"
+     "images/hostel/coliving.jpg",
+     "images/hostel/coliving.jpg",
     ]
   }
 ];

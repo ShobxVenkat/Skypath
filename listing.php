@@ -49,13 +49,29 @@ if (rawType.includes('bhk') || rawType.includes('apartment')) {
     return false;
   });
 
-} else if (rawType.includes('hostel') || rawType.includes('pg')) {
+} else if (rawType.includes('co-living')) {
 
   filtered = hostelData.filter(item =>
-    item.type.toLowerCase().includes(type.toLowerCase())
+    item.type.toLowerCase().includes('co-living')
   );
 
-} else {
+} else if (rawType.includes('boys')) {
+
+  filtered = hostelData.filter(item =>
+    item.type.toLowerCase().includes('boys') &&
+    !item.type.toLowerCase().includes('co-living')
+  );
+
+} else if (rawType.includes('girls')) {
+
+  filtered = hostelData.filter(item =>
+    item.type.toLowerCase().includes('girls') &&
+    !item.type.toLowerCase().includes('co-living')
+  );
+
+}
+
+ else {
 
   filtered = servicesData.filter(item =>
     item.name.toLowerCase().includes(type.toLowerCase())
