@@ -91,7 +91,7 @@ $isLoggedIn = false; // later session se aayega
   <div class="container">
     <div class="d-flex justify-content-between">
 
-      <a href="home.php" class="nav-item <?= $currentPage=='home'?'active':'' ?>">
+      <a href="index.php" class="nav-item <?= $currentPage=='home'?'active':'' ?>">
         <i class="bi bi-house-fill"></i>
         Home
       </a>

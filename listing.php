@@ -206,7 +206,7 @@ function confirmInterest() {
 
 function closeInterestPopup() {
   document.getElementById('interestPopup').classList.add('d-none');
-  window.location.href = '/project/home.php';
+  window.location.href = '/project/index.php';
 }
 
 /* ================= FAVOURITES ================= */

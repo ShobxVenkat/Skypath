@@ -79,7 +79,7 @@ $location  = $location  ?? "Location not set";
 
   <!-- TOP ROW -->
   <div class="d-flex justify-content-between align-items-center">
-    <a href="home.php">
+    <a href="index.php">
     <img src="images/logo.png" alt="RHS Logo" class="logo-img set-pointer"></a>
     <img src="images/bell.png" alt="Notifications" class="header-icon set-pointer">
   </div>
