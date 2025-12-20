@@ -22,6 +22,9 @@ $location  = $location  ?? "Location not set";
 .set-pointer {
   cursor: pointer;
 }
+.blue{
+  color:blue;
+}
 
     .header-icon {
       width: 50px;
@@ -89,7 +92,7 @@ $location  = $location  ?? "Location not set";
         <span class="location-text"><?= $location ?></span>
       </div>
 
-      <span class="set-pointer">Set location</span>
+      <span class="set-pointer blue">Set location</span>
     </div>
   </div>
 
